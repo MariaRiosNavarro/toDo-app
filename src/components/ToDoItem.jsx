@@ -110,6 +110,13 @@ const ToDoItem = ({ todo, setToDos }) => {
       : "border-2 border-primary"
   }`;
 
+  const dynamicalClassesTaskText = `font-bold text-lg pl-[1rem] pb-4 
+  ${todo.done ? "line-through" : ""} 
+  ${todo.priority === "high" ? "text-secondary" : ""}
+  ${todo.priority === "low" ? "text-primary" : ""}
+  ${todo.priority === "normal" ? "text-accent" : ""} 
+  }`;
+
   const dynamicalClassesBadge = `badge badge-outline 
   ${todo.priority === "high" ? "badge-secondary" : ""} 
   ${todo.priority === "low" ? "badge-primary" : ""}
@@ -117,12 +124,8 @@ const ToDoItem = ({ todo, setToDos }) => {
 
   return (
     <article onClick={changeDone} className={dynamicalClassesArticle}>
-      <div className="flex flex-col w-[100%] pl-[1rem]">
-        <p
-          className={todo.done ? "line-through  text-lg" : "font-bold text-lg"}
-        >
-          {todo.task}
-        </p>
+      <div className="flex flex-col w-[100%] ">
+        <p className={dynamicalClassesTaskText}>{todo.task}</p>
         <div className="flex pl-[1rem] gap-[5rem]">
           <div
             className={
