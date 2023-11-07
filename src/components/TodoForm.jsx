@@ -22,6 +22,8 @@ const TodoForm = (props) => {
         return [...prev, newTask];
       });
       setTask("");
+      setCategory("");
+      setPriority("");
     }
   };
 
@@ -68,7 +70,7 @@ const TodoForm = (props) => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option disabled value="">
+            <option disabled value="" selected>
               Category
             </option>
             <option value="all">All</option>
@@ -81,7 +83,7 @@ const TodoForm = (props) => {
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
           >
-            <option disabled value="">
+            <option disabled value="" selected>
               Priority
             </option>
             <option value="high">High</option>

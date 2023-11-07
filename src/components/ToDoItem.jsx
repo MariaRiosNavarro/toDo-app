@@ -94,7 +94,7 @@ const ToDoItem = ({ todo, setToDos }) => {
     });
   }
 
-  const itemClasses = `border-2 my-2 rounded-xl flex p-4 h-18 ${
+  const dynamicalClassesArticle = `border-2 my-2 rounded-xl flex p-4 h-18 ${
     todo.done ? "bg-green-300" : ""
   } ${
     todo.priority === "high"
@@ -110,31 +110,36 @@ const ToDoItem = ({ todo, setToDos }) => {
       : "border-2 border-primary"
   }`;
 
+  const dynamicalClassesBadge = `badge badge-outline 
+  ${todo.priority === "high" ? "badge-secondary" : ""} 
+  ${todo.priority === "low" ? "badge-primary" : ""}
+  ${todo.priority === "normal" ? "badge-accent" : ""} `;
+
   return (
-    <article onClick={changeDone} className={itemClasses}>
-      <div className="flex flex-col w-[100%]">
+    <article onClick={changeDone} className={dynamicalClassesArticle}>
+      <div className="flex flex-col w-[100%] pl-[1rem]">
         <p
-          className={
-            todo.done ? "line-through text-center" : "text-center font-bold"
-          }
+          className={todo.done ? "line-through  text-lg" : "font-bold text-lg"}
         >
           {todo.task}
         </p>
         <div className="flex pl-[1rem] gap-[5rem]">
-          <p
+          <div
             className={
               todo.done ? "line-through text-gray-500" : "text-gray-500"
             }
           >
-            Category: {todo.category}
-          </p>
-          <p
+            <span className="block">Category: </span>
+            <p>{todo.category}</p>
+          </div>
+          <div
             className={
               todo.done ? "line-through text-gray-500" : "text-gray-500"
             }
           >
-            Priority: {todo.priority}
-          </p>
+            <span className="block">Priority:</span>
+            <p className={dynamicalClassesBadge}>{todo.priority}</p>
+          </div>
         </div>
       </div>
       {todo.done && (
