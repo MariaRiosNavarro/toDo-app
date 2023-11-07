@@ -95,7 +95,7 @@ const ToDoItem = ({ todo, setToDos }) => {
   }
 
   const dynamicalClassesArticle = `border-2 my-2 rounded-xl flex p-4 h-18 ${
-    todo.done ? "bg-green-300" : ""
+    todo.done ? "bg-[#CDFAD5]" : ""
   } ${
     todo.priority === "high"
       ? todo.done
@@ -130,7 +130,7 @@ const ToDoItem = ({ todo, setToDos }) => {
             }
           >
             <span className="block">Category: </span>
-            <p>{todo.category}</p>
+            <p className="badge badge-outline">{todo.category}</p>
           </div>
           <div
             className={
