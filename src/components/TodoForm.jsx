@@ -22,8 +22,8 @@ const TodoForm = (props) => {
         return [...prev, newTask];
       });
       setTask("");
-      setCategory("");
-      setPriority("");
+      setCategory(category);
+      setPriority(priority);
     }
   };
 
