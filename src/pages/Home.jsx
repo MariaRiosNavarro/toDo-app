@@ -12,7 +12,7 @@ const Home = () => {
         PROPS Tasks
       </h1>
       <TodoForm setToDos={setToDos}></TodoForm>
-      <ToDoList toDos={toDos} setToDos={setToDos} />
+      <ToDoList items={toDos} setToDos={setToDos} />
     </section>
   );
 };

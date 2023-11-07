@@ -1,4 +1,15 @@
 const TodoForm = (props) => {
+  //   function addTodo(e) {
+  //     if (e.key === "Enter" && e.target.value.length > 3) {
+  //       const task = taskBuilder(e.target.value);
+  //       props.setToDos((prev) => {
+  //         return [...prev, task];
+  //       });
+
+  //       e.target.value = "";
+  //     }
+  //   }
+
   function addTodo(e) {
     if (e.key === "Enter" && e.target.value.length > 3) {
       const task = taskBuilder(e.target.value);

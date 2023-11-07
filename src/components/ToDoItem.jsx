@@ -1,13 +1,11 @@
+import { useState } from "react";
+
 const ToDoItem = ({ todo, setToDos }) => {
+  const [done, setDone] = useState(todo.done);
+
   function changeDone() {
-    setToDos((prev) => {
-      return prev.map((item) => {
-        if (item.task === todo.task) {
-          return { ...item, done: !item.done };
-        }
-        return item;
-      });
-    });
+    todo.done = !todo.done;
+    setDone(todo.done);
   }
 
   function deleteTask() {
@@ -19,18 +17,14 @@ const ToDoItem = ({ todo, setToDos }) => {
   return (
     <article
       onClick={changeDone}
-      className={
-        todo.done
-          ? "bg-green-300 p-4 h-16 my-2 rounded-xl flex border border-green-500"
-          : "border border-green-500 bg-red-300 p-4 h-16 my-2 rounded-xl flex "
-      }
+      className={"border border-green-500 p-4 h-16 my-2 rounded-xl flex"}
     >
       <p className={todo.done ? "line-through" : ""}>{todo.task}</p>
 
-      {todo.done && (
+      {done && (
         <button
           onClick={deleteTask}
-          className="bg-red-500 color-white rounded-xl ml-auto w-14"
+          className="bg-red-500 color-white rounded-xl ml-auto w-14 "
         >
           X
         </button>
