@@ -1,11 +1,13 @@
-import ToDo from "./ToDo";
+import ToDoItem from "./ToDoItem";
 
-const ToDoList = () => {
+const ToDoList = (props) => {
   return (
-    <div>
+    <section>
       <h2>ToDoList</h2>
-      <ToDo />
-    </div>
+      {props.items?.map((item, index) => (
+        <ToDoItem key={index} todo={item} />
+      ))}
+    </section>
   );
 };
 

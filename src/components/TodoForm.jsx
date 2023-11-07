@@ -1,0 +1,31 @@
+const TodoForm = (props) => {
+  function addTodo(e) {
+    if (e.key === "Enter") {
+      const task = taskBuilder(e.target.value);
+      props.setToDos((prev) => {
+        return [...prev, task];
+      });
+      e.target.value = "";
+    }
+  }
+
+  function taskBuilder(inputTask) {
+    return {
+      task: inputTask,
+    };
+  }
+
+  return (
+    <section className="flex justify-center items-center py-40">
+      <input
+        onKeyDown={addTodo}
+        className="border-b-2 outline-none px-5 py-4 text-3xl"
+        type="text"
+        name="task"
+        id=""
+      />
+    </section>
+  );
+};
+
+export default TodoForm;

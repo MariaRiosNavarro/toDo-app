@@ -2,8 +2,10 @@
 
 # User Stories
 
-<div><img src="./public/img/Bildschirm­foto 2023-11-07 um 09.21.56.png" alt="" width=""></div>
+<div><img src="./public/img/userStories.png" alt="" width=""></div>
 
 # Datenmmodel
 
-<div><img src="./public/img/Bildschirm­foto 2023-11-07 um 09.23.05.png" alt="" width=""></div>
+<div><img src="./public/img/datenmodel.png" alt="" width=""></div>
+
+# Design
