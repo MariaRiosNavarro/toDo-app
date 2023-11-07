@@ -19,7 +19,11 @@ const ToDoItem = ({ todo, setToDos }) => {
   return (
     <article
       onClick={changeDone}
-      className="border border-green-500 p-4 h-16 my-2 rounded-xl flex"
+      className={
+        todo.done
+          ? "bg-green-300 p-4 h-16 my-2 rounded-xl flex border border-green-500"
+          : "border border-green-500 bg-red-300 p-4 h-16 my-2 rounded-xl flex "
+      }
     >
       <p className={todo.done ? "line-through" : ""}>{todo.task}</p>
 
