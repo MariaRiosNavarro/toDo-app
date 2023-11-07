@@ -1,11 +1,12 @@
 import ToDoItem from "./ToDoItem";
 
-const ToDoList = (props) => {
+const ToDoList = ({ toDos, setToDos }) => {
   return (
     <section>
-      <h2>ToDoList</h2>
-      {props.items?.map((item, index) => (
-        <ToDoItem key={index} todo={item} />
+      <h2 className="text-center"> Tasks</h2>
+
+      {toDos?.map((item, index) => (
+        <ToDoItem key={index} todo={item} setToDos={setToDos} />
       ))}
     </section>
   );

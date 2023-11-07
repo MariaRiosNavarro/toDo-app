@@ -1,6 +1,6 @@
 const TodoForm = (props) => {
   function addTodo(e) {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && e.target.value.length > 3) {
       const task = taskBuilder(e.target.value);
       props.setToDos((prev) => {
         return [...prev, task];
@@ -12,6 +12,7 @@ const TodoForm = (props) => {
   function taskBuilder(inputTask) {
     return {
       task: inputTask,
+      done: false,
     };
   }
 
