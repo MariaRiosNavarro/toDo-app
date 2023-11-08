@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ToDoList from "../components/ToDoList";
 import TodoForm from "../components/TodoForm";
+import Header from "../components/Header";
 
 const Home = () => {
   const [toDos, setToDos] = useState([]);
@@ -8,9 +9,7 @@ const Home = () => {
 
   return (
     <section className="max-w-[95vw] my-0 mx-auto h-screen">
-      <h1 className="text-center text-primary p-8 text-4xl font-bold rounded-xl mx-auto">
-        PROPS Tasks
-      </h1>
+      <Header />
       <TodoForm setToDos={setToDos}></TodoForm>
       <ToDoList toDos={toDos} setToDos={setToDos} />
     </section>
