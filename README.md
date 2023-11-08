@@ -7,13 +7,11 @@ ADD toggle dark mode
 # Mobile
 
 <div>
-<img src="./public/img/readme1.png" alt="" width="300px" >
-<img src="./public/img/readme2.png" alt="" width="300px" >
-<img src="./public/img/readme3.png" alt="" width="300px" >
-<img src="./public/img/readme4.png" alt="" width="300px" >
-<img src="./public/img/readme5.png" alt="" width="300px" >
-<img src="./public/img/readme6.png" alt="" width="300px" >
-<img src="./public/img/readme7.png" alt="" width="300px" >
+<img src="./public/img/readme1 09.41.01.png" alt="" width="300px" >
+<img src="./public/img/readme2 09.41.01.png" alt="" width="300px" >
+<img src="./public/img/readme3 09.41.05.png" alt="" width="300px" >
+<img src="./public/img/readme4 09.41.05.png" alt="" width="300px" >
+<img src="./public/img/readme5 09.41.05.png" alt="" width="300px" >
 
 </div>
 
