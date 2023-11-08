@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { useState } from "react";
-
 const Header = () => {
   // use theme from local storage if available or set cupcake theme
   const [theme, setTheme] = useState(
