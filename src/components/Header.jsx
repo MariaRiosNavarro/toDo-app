@@ -1,4 +1,30 @@
+import { useEffect } from "react";
+import { themeChange } from "theme-change";
+import { useState } from "react";
+
 const Header = () => {
+  // use theme from local storage if available or set cupcake theme
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "cupcake"
+  );
+
+  // update state on toggle
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("night");
+    } else {
+      setTheme("cupcake");
+    }
+  };
+
+  // set theme state in localstorage on mount & also update localstorage on state change
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    // add custom data-theme attribute to html tag required to update theme using DaisyUI
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   return (
     <div>
       <h1 className="text-center text-primary p-8 text-4xl font-bold rounded-xl mx-auto">
@@ -6,7 +32,13 @@ const Header = () => {
       </h1>
       <label className="swap swap-rotate absolute right-6 top-8">
         {/* this hidden checkbox controls the state */}
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          data-toggle-theme="cupcake, night"
+          data-act-class="ACTIVECLASS"
+          onChange={handleToggle}
+          checked={theme === "cupcake" ? false : true}
+        />
 
         {/* sun icon */}
         <svg
