@@ -10,8 +10,6 @@
 <img src="./public/img/readme3.png" alt="" width="300px" >
 <img src="./public/img/readme4.png" alt="" width="300px" >
 <img src="./public/img/readme5.png" alt="" width="300px" >
-<img src="./public/img/readme6.png" alt="" width="300px" >
-<img src="./public/img/readme7.png" alt="" width="300px" >
 
 </div>
 
