@@ -39,12 +39,12 @@ const TodoForm = (props) => {
   return (
     <form
       onSubmit={handleTodo}
-      className="flex flex-col justify-center items-center p-8 border-2 border-gray-200 h-[20rem] rounded-xl"
+      className="flex flex-col justify-center items-center p-8 border-2 border-primary h-[20rem] rounded-xl"
     >
       <input
         onChange={handleInputChange}
         value={task}
-        className="border-b-4 outline-none text-2xl bg-transparent"
+        className="border-b-4 border-primary outline-none text-2xl bg-transparent"
         type="text"
         name="task"
         id="task"
