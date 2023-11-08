@@ -31,11 +31,11 @@ const Header = () => {
         PROPS Tasks
       </h1>
       <label className="swap swap-rotate absolute right-6 top-8">
-        {/* this hidden checkbox controls the state */}
         <input
           type="checkbox"
           data-toggle-theme="cupcake, night"
           data-act-class="ACTIVECLASS"
+          // toggle
           onChange={handleToggle}
           checked={theme === "cupcake" ? false : true}
         />
